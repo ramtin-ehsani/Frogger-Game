@@ -3,15 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class Frog : MonoBehaviour
 {
     public Rigidbody2D rb;
+
+    private float freezeTime = 3f;
+    private bool isFreezed;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        isFreezed = false;
     }
 
     // Update is called once per frame
@@ -33,6 +37,36 @@ public class Frog : MonoBehaviour
         {
             rb.MovePosition(rb.position + Vector2.down);
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isFreezed = true;
+            GameObject[] cars = GameObject.FindGameObjectsWithTag("Car");
+            foreach (GameObject car in cars)
+            {
+                Car renderedCar = car.GetComponent<Car>();
+                renderedCar.speed = 1f;
+            }
+            Car.minSpeed = 1f;
+            Car.maxSpeed = 1f;
+        }
+
+        if (isFreezed)
+        {
+            freezeTime -= Time.deltaTime;
+            if (freezeTime < 0)
+            {
+                isFreezed = false;
+                GameObject[] cars = GameObject.FindGameObjectsWithTag("Car");
+                foreach (GameObject car in cars)
+                {
+                    Car renderedCar = car.GetComponent<Car>();
+                    renderedCar.speed = Random.Range(8f, 12f);;
+                }
+                freezeTime = 3f;
+                Car.minSpeed = 8f;
+                Car.maxSpeed = 12f;
+            }
+        }
         
     }
 
@@ -42,12 +76,20 @@ public class Frog : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Score.score = 0;
+            freezeTime = 3f;
+            isFreezed = false;
+            Car.minSpeed = 8f;
+            Car.maxSpeed = 12f;
             Debug.Log("HIT!");
         }
         if (other.gameObject.CompareTag(TagNames.End.ToString()))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Score.score += 100;
+            freezeTime = 3f;
+            isFreezed = false;
+            Car.minSpeed = 8f;
+            Car.maxSpeed = 12f;
             Debug.Log("END!");
         }
     }
