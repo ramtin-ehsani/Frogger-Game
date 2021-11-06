@@ -10,12 +10,16 @@ Frogger game for Classic Games Remix Jam.
 - [x] Car movement
 - [x] Car prefab
 - [x] Car spawner
+- [x] Slow-motion effect for 3 seconds
+- [ ] Add logic for the number of slow-motions
 - [ ] Different cars
-- [ ] Opposite driving cars
-- [ ] Frog-Car colliding
-- [ ] Death logic
-- [ ] Win logic
-- [ ] Score UI
-- [ ] Hearts UI
+- [x] Opposite driving cars
+- [x] Frog-Car colliding
+- [x] Death logic
+- [x] Win logic
+- [x] Score UI
 - [ ] Win/Lose UI
-- [ ] Replay Option
+- [ ] Main menu
+- [ ] Pause game
+
+## Demo
