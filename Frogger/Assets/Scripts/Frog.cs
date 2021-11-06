@@ -43,5 +43,10 @@ public class Frog : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Debug.Log("HIT!");
         }
+        if (other.gameObject.CompareTag(TagNames.End.ToString()))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("END!");
+        }
     }
 }
