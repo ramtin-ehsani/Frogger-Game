@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
 
     public float delay = .3f;
 
+    public Transform[] points;
     public GameObject car;
 
     private float nextTimeToSpawn = 0f;
@@ -28,6 +29,8 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        Instantiate(car);
+        int randomPoint = Random.Range(0, points.Length);
+        Transform spawnPoint = points[randomPoint];
+        Instantiate(car, spawnPoint.position, spawnPoint.rotation);
     }
 }
