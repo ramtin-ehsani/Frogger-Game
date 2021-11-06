@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Frog : MonoBehaviour
 {
@@ -32,5 +34,14 @@ public class Frog : MonoBehaviour
             rb.MovePosition(rb.position + Vector2.down);
         }
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag(TagNames.Car.ToString()))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("HIT!");
+        }
     }
 }
