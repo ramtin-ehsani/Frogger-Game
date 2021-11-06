@@ -41,11 +41,13 @@ public class Frog : MonoBehaviour
         if (other.gameObject.CompareTag(TagNames.Car.ToString()))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Score.score = 0;
             Debug.Log("HIT!");
         }
         if (other.gameObject.CompareTag(TagNames.End.ToString()))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Score.score += 100;
             Debug.Log("END!");
         }
     }

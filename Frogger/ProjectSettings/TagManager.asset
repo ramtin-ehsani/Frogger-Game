@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Car
   - End
+  - Score
   layers:
   - Default
   - TransparentFX
