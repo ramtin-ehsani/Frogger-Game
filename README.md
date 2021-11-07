@@ -12,7 +12,8 @@ Frogger game for Classic Games Remix Jam.
 - [x] Car spawner
 - [x] Slow-motion effect for 3 seconds
 - [ ] Add logic for the number of slow-motions
-- [ ] Different cars
+- [x] Asphalt Road
+- [x] Different spawning cars
 - [x] Opposite driving cars
 - [x] Frog-Car colliding
 - [x] Death logic
