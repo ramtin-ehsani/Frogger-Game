@@ -480,7 +480,10 @@ MonoBehaviour:
   - {fileID: 1709105741}
   - {fileID: 244518347}
   - {fileID: 1861618791}
-  car: {fileID: 2717764987146065378, guid: a18bcd5427502014fbb73eaedc0d7b99, type: 3}
+  cars:
+  - {fileID: 2717764987146065378, guid: a18bcd5427502014fbb73eaedc0d7b99, type: 3}
+  - {fileID: 2717764987146065378, guid: 350e989fffffa334c985628b69d734a5, type: 3}
+  - {fileID: 2717764987146065378, guid: 48aaba8f6e3366247948368fbf4509ff, type: 3}
 --- !u!4 &95076665
 Transform:
   m_ObjectHideFlags: 0

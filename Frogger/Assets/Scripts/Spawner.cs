@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public float delay = .3f;
 
     public Transform[] points;
-    public GameObject car;
+    public GameObject[] cars;
 
     private float nextTimeToSpawn = 0f;
     // Start is called before the first frame update
@@ -30,7 +30,9 @@ public class Spawner : MonoBehaviour
     void Spawn()
     {
         int randomPoint = Random.Range(0, points.Length);
+        int randomCar = Random.Range(0, cars.Length);
         Transform spawnPoint = points[randomPoint];
+        GameObject car = cars[randomCar];
         Instantiate(car, spawnPoint.position, spawnPoint.rotation);
     }
 }
