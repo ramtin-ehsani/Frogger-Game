@@ -1,5 +1,5 @@
 # Frogger Game
-Remember Frogger game? [Link](https://www.youtube.com/watch?v=l9fO-YuWPSk)
+Remember [Frogger game](https://www.youtube.com/watch?v=l9fO-YuWPSk)?
 
 I have developed a similar game like Frogger with better graphics and newer mechanics and features for [Classic Games Remix Jam](https://itch.io/jam/classic-games-remix).
 
