@@ -20,7 +20,7 @@ Frogger game for Classic Games Remix Jam.
 - [x] Win logic
 - [x] Score UI
 - [ ] Win/Lose UI
-- [ ] Main menu
+- [x] Main menu
 - [ ] Pause game
 
 ## Demo
