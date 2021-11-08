@@ -1,5 +1,7 @@
 # Frogger Game
-Frogger game for Classic Games Remix Jam.
+Remember Frogger game? [Link](https://www.youtube.com/watch?v=l9fO-YuWPSk)
+
+I have developed a similar game like Frogger with better graphics and newer mechanics and features for [Classic Games Remix Jam](https://itch.io/jam/classic-games-remix).
 
 ## TO-DO
 - [x] Setup project
@@ -10,7 +12,7 @@ Frogger game for Classic Games Remix Jam.
 - [x] Car movement
 - [x] Car prefab
 - [x] Car spawner
-- [x] Slow-motion effect for 3 seconds
+- [x] Slow motion effect for 3 seconds
 - [ ] Add logic for the number of slow-motions
 - [x] Asphalt Road
 - [x] Different spawning cars
@@ -21,6 +23,8 @@ Frogger game for Classic Games Remix Jam.
 - [x] Score UI
 - [ ] Win/Lose UI
 - [x] Main menu
-- [ ] Pause game
+- [x] Pause game
+- [x] Animation for panels
+- [x] TextMesh Pro
 
 ## Demo
