@@ -11,11 +11,22 @@ public class Frog : MonoBehaviour
 
     private float freezeTime = 3f;
     private bool isFreezed;
+
+    private GameObject[] apples;
+    private int chosenApple;
     
     // Start is called before the first frame update
     void Start()
     {
         isFreezed = false;
+        apples = GameObject.FindGameObjectsWithTag("Apple");
+        foreach (GameObject apple in apples)
+        {
+            apple.SetActive(false);
+        }
+        chosenApple = Random.Range(0, apples.Length);
+        Debug.Log("chose"+chosenApple);
+        apples[chosenApple].SetActive(true);
     }
 
     // Update is called once per frame
