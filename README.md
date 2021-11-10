@@ -13,7 +13,8 @@ I have developed a similar game like Frogger with better graphics and newer mech
 - [x] Car prefab
 - [x] Car spawner
 - [x] Slow motion effect for 3 seconds
-- [ ] Add logic for the number of slow-motions
+- [x] Add logic for the number of slow motions
+- [x] 3 apples -> cost 1 slow motion effect by pressing F
 - [x] Asphalt Road
 - [x] Different spawning cars
 - [x] Opposite driving cars
@@ -21,7 +22,7 @@ I have developed a similar game like Frogger with better graphics and newer mech
 - [x] Death logic
 - [x] Win logic
 - [x] Score UI
-- [ ] Win/Lose UI
+- [x] Number of apples UI
 - [x] Main menu
 - [x] Pause game
 - [x] Animation for panels
