@@ -6,4 +6,5 @@ public enum TagNames
 {
     Car,
     End,
+    Apple,
 }

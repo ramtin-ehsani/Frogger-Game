@@ -50,15 +50,19 @@ public class Frog : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            isFreezed = true;
-            GameObject[] cars = GameObject.FindGameObjectsWithTag("Car");
-            foreach (GameObject car in cars)
+            if (Apples.apples >= 3)
             {
-                Car renderedCar = car.GetComponent<Car>();
-                renderedCar.speed = 1f;
+                isFreezed = true;
+                GameObject[] cars = GameObject.FindGameObjectsWithTag("Car");
+                foreach (GameObject car in cars)
+                {
+                    Car renderedCar = car.GetComponent<Car>();
+                    renderedCar.speed = 1f;
+                }
+                Car.minSpeed = 1f;
+                Car.maxSpeed = 1f;
+                Apples.apples -= 3;
             }
-            Car.minSpeed = 1f;
-            Car.maxSpeed = 1f;
         }
 
         if (isFreezed)
@@ -87,6 +91,7 @@ public class Frog : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Score.score = 0;
+            Apples.apples = 0;
             freezeTime = 3f;
             isFreezed = false;
             Car.minSpeed = 8f;
@@ -102,6 +107,11 @@ public class Frog : MonoBehaviour
             Car.minSpeed = 8f;
             Car.maxSpeed = 12f;
             Debug.Log("END!");
+        }
+        if (other.gameObject.CompareTag(TagNames.Apple.ToString()))
+        {
+            Apples.apples += 1;
+            apples[chosenApple].SetActive(false);
         }
     }
 }
