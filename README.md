@@ -28,4 +28,13 @@ I have developed a similar game like Frogger with better graphics and newer mech
 - [x] Animation for panels
 - [x] TextMesh Pro
 
+## How To Play
+You need to play using your `arrow keys` on your keyboard. After eating 3 apples, you can press `F` to use the slow motion effect.
+
 ## Demo
+
+
+https://user-images.githubusercontent.com/51258896/142215898-2b5aa39a-21de-4a08-bf2a-210da6f70485.mp4
+
+
+
